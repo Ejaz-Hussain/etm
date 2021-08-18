@@ -1,0 +1,448 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  opacity: 0;
+  animation-name: fade;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  // user-select: none;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.showcase {
+  background-color: #333;
+  // padding-bottom: 50px;
+  // border-bottom: 1px solid rgb(64, 226, 177);
+}
+
+header {
+  background-color: #000;
+  min-height: 12vh;
+  line-height: 12vh;
+  border-bottom: 5px solid rgb(64, 226, 177);
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo:hover {
+    cursor: pointer;
+  }
+  .logo {
+    position: relative;
+    animation-name: come-in;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+
+  .nav-bar ul {
+    display: flex;
+    list-style-type: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    li {
+      padding-right: 50px;
+    }
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition-property: transform;
+    transition-duration: 300ms;
+    transition-timing-function: ease-out;
+    &:hover {
+      //   color: coral;
+      // color: rgb(64, 226, 177);
+      color: greenyellow;
+      display: inline-block;
+      transform: translateY(-2%);
+    }
+  }
+}
+
+@keyframes come-in {
+  from {
+    top: -50%;
+  }
+  to {
+    top: 0%;
+  }
+}
+
+#hamburger {
+  color: white;
+  font-size: 40px;
+}
+
+main.main-area {
+  // padding-top: 50px;
+  width: 100%;
+  min-height: 70vh;
+  background-color: black;
+  background-image: url(../images/primeXbtt.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  h1 {
+    position: relative;
+    animation-name: move-from-right;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    font-size: 50px;
+    min-height: 10vh;
+    // background-color: lime;
+    // text-shadow: 1px 1px 1px rgb(64, 226, 177);
+    color: rgb(64, 226, 177);
+    color: white;
+    text-shadow: 1px 1px 1px rgb(255, 255, 255);
+
+    // color: rgb(0, 153, 255);
+    // position: relative;
+    // left: -70px;
+  }
+
+  @keyframes move-from-right {
+    from {
+      right: -50%;
+      opacity: 0;
+    }
+    to {
+      right: 0%;
+      opacity: 1;
+    }
+  }
+
+  p {
+    font-size: 16px;
+    min-height: 10vh;
+    padding-top: 50px;
+    // background-color: lime;
+    position: relative;
+    animation-name: come-from-left;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+  }
+  @keyframes come-from-left {
+    from {
+      left: -50%;
+      opacity: 0;
+    }
+    to {
+      left: 0%;
+      opacity: 1;
+    }
+  }
+
+  a {
+    font-size: 18px;
+    color: white;
+    display: inline-block;
+    margin: 0 5px;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    &:hover {
+      //   color: rgb(64, 226, 177);
+      color: rgb(0, 153, 255);
+    }
+  }
+}
+
+.advantages {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 150px;
+  align-items: flex-start;
+  min-height: 60vh;
+  background-color: rgb(46, 44, 44);
+  background-image: url(../images/trading8.png);
+  background-size: 900% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+
+  .advantage1,
+  .advantage2,
+  .advantage3,
+  .advantage4 {
+    width: 20%;
+    padding: 20px;
+    line-height: 30px;
+  }
+}
+
+.primexbt {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  //   padding-top: 80px;
+  padding: 150px 0px;
+  // background-color: rgb(42, 123, 199);
+  background-color: #000;
+  //   background-image: url(../images/trading3.webp);
+  // background-color: rgb(64, 226, 177);
+
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  min-height: 50vh;
+
+  img {
+    width: 700px;
+    height: 300px;
+  }
+  .text {
+    width: 50%;
+    text-align: left;
+    padding-left: 5%;
+    h2 {
+      color: white;
+      // color: black;
+
+      font-size: 40px;
+    }
+    p {
+      padding-top: 30px;
+      width: 50%;
+      line-height: 30px;
+      font-size: 14px;
+      word-break: break-all;
+      color: rgb(255, 255, 255);
+      // color: black;
+
+      font-weight: bold;
+      //   text-shadow: 1px 1px 1px black;
+    }
+  }
+}
+
+#reviewss {
+  min-height: 40vh;
+  width: 100%;
+  padding: 150px 150px 300px 150px;
+  background-image: url(../images/trading8.png);
+  background-size: 900% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-shadow: 2px 2px 2px black;
+  // font-size: 20px;
+  // background-size: contain;
+  // background-color: #000;
+  .reviews {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+#review-heading {
+  text-align: center;
+  padding: 40px 0px;
+  color: white;
+}
+
+.reviews .review {
+  //   border: 2px solid white;
+  outline: 2px solid white;
+  color: white;
+  padding: 80px 80px 80px 80px;
+  min-height: 250px;
+  border-radius: 3px;
+  //   line-height: 300px;
+  //   word-break: break-all;
+  width: 32%;
+  h3 {
+    font-size: 14px;
+  }
+}
+
+footer {
+  min-height: 7vh;
+  // background-color: rgb(64, 226, 177);
+  background-color: #f4f4f4;
+  background-image: url(../images/trading8.png);
+  color: white;
+  text-align: center;
+  padding-bottom: 10px;
+  .mail {
+    // background-color: #111;
+    // color: white;
+    padding: 20px;
+    font-size: 14px;
+  }
+}
+
+.about-me {
+  background-color: #000;
+  color: white;
+  padding: 50px 0px;
+}
+
+.about-me .container {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  a {
+    text-decoration: none;
+    color: greenyellow !important;
+  }
+  img {
+    max-width: 600px;
+    max-height: 600px;
+    // border-radius: 50%;
+  }
+  .social-icons i {
+    font-size: 30px;
+    margin: 5px 15px 5px 15px;
+    // color: lightskyblue;
+    // color: red;
+  }
+  // .social-icons i.fa-youtube {
+  //   color: rgb(255, 38, 0);
+  // }
+  // .social-icons i.fa-twitter {
+  //   color: rgb(47, 158, 233);
+  // }
+  // .social-icons i.fa-instagram {
+  //   color: orange;
+  // }
+  // .social-icons i.fa-telegram-plane {
+  //   color: cyan;
+  // }
+
+  .social-icons {
+    margin-top: 20px;
+    border: 1px solid orange;
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .primexbt {
+    flex-direction: column;
+    align-items: center;
+    .text {
+      width: 100%;
+      text-align: center;
+      p {
+        width: 80%;
+        margin: auto;
+      }
+    }
+    img {
+      width: 100%;
+    }
+  }
+  header a {
+    font-size: 16px;
+  }
+  .about-me .container .about-text {
+    padding-top: 50px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .reviews {
+    flex-direction: column;
+    .review {
+      width: 100%;
+      margin-bottom: 50px;
+    }
+  }
+  main.main-area {
+    width: 100%;
+    background-image: url("../images/prime-xbt.png");
+    // background-attachment: fixed;
+    background-size: contain;
+  }
+  .advantages {
+    flex-wrap: wrap;
+    .advantage1,
+    .advantage2,
+    .advantage3,
+    .advantage4 {
+      width: 50%;
+    }
+  }
+}
+
+@media (max-width: 856px) {
+  header .container .nav-bar {
+    display: none;
+  }
+}
+
+@media (min-width: 856px) {
+  header .fa-bars {
+    display: none !important;
+  }
+}
+
+@media (max-height: 888px) {
+  main.main-area {
+    min-height: 80vh;
+  }
+}
+
+@media (max-width: 768px) {
+  #reviewss {
+    padding: 50px;
+  }
+  .about-me .container img {
+    width: 300px;
+    height: 250px;
+  }
+  .advantages {
+    width: 100% !important;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .advantage1,
+  .advantage2,
+  .advantage3,
+  .advantage4 {
+    width: 95% !important;
+    text-align: left;
+  }
+}
+
+@media (min-width: 850px) and (max-width: 1022px) {
+  main.main-area {
+    height: 90vh !important;
+  }
+}

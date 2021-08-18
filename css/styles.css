@@ -1,0 +1,538 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  opacity: 0;
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+          animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.showcase {
+  background-color: #333;
+}
+
+header {
+  background-color: #000;
+  min-height: 12vh;
+  line-height: 12vh;
+  border-bottom: 5px solid #40e2b1;
+}
+
+header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .logo:hover {
+  cursor: pointer;
+}
+
+header .logo {
+  position: relative;
+  -webkit-animation-name: come-in;
+          animation-name: come-in;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+header .nav-bar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+header .nav-bar ul li {
+  padding-right: 50px;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+
+header a:hover {
+  color: greenyellow;
+  display: inline-block;
+  -webkit-transform: translateY(-2%);
+          transform: translateY(-2%);
+}
+
+@-webkit-keyframes come-in {
+  from {
+    top: -50%;
+  }
+  to {
+    top: 0%;
+  }
+}
+
+@keyframes come-in {
+  from {
+    top: -50%;
+  }
+  to {
+    top: 0%;
+  }
+}
+
+#hamburger {
+  color: white;
+  font-size: 40px;
+}
+
+main.main-area {
+  width: 100%;
+  min-height: 70vh;
+  background-color: black;
+  background-image: url(../images/primeXbtt.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.main-area h1 {
+  position: relative;
+  -webkit-animation-name: move-from-right;
+          animation-name: move-from-right;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  font-size: 50px;
+  min-height: 10vh;
+  color: #40e2b1;
+  color: white;
+  text-shadow: 1px 1px 1px white;
+}
+
+@-webkit-keyframes move-from-right {
+  from {
+    right: -50%;
+    opacity: 0;
+  }
+  to {
+    right: 0%;
+    opacity: 1;
+  }
+}
+
+@keyframes move-from-right {
+  from {
+    right: -50%;
+    opacity: 0;
+  }
+  to {
+    right: 0%;
+    opacity: 1;
+  }
+}
+
+main.main-area p {
+  font-size: 16px;
+  min-height: 10vh;
+  padding-top: 50px;
+  position: relative;
+  -webkit-animation-name: come-from-left;
+          animation-name: come-from-left;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes come-from-left {
+  from {
+    left: -50%;
+    opacity: 0;
+  }
+  to {
+    left: 0%;
+    opacity: 1;
+  }
+}
+
+@keyframes come-from-left {
+  from {
+    left: -50%;
+    opacity: 0;
+  }
+  to {
+    left: 0%;
+    opacity: 1;
+  }
+}
+
+main.main-area a {
+  font-size: 18px;
+  color: white;
+  display: inline-block;
+  margin: 0 5px;
+  text-decoration: none;
+  border-bottom: 1px solid white;
+}
+
+main.main-area a:hover {
+  color: #0099ff;
+}
+
+.advantages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding-top: 150px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  min-height: 60vh;
+  background-color: #2e2c2c;
+  background-image: url(../images/trading8.png);
+  background-size: 900% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+
+.advantages .advantage1,
+.advantages .advantage2,
+.advantages .advantage3,
+.advantages .advantage4 {
+  width: 20%;
+  padding: 20px;
+  line-height: 30px;
+}
+
+.primexbt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 150px 0px;
+  background-color: #000;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  min-height: 50vh;
+}
+
+.primexbt img {
+  width: 700px;
+  height: 300px;
+}
+
+.primexbt .text {
+  width: 50%;
+  text-align: left;
+  padding-left: 5%;
+}
+
+.primexbt .text h2 {
+  color: white;
+  font-size: 40px;
+}
+
+.primexbt .text p {
+  padding-top: 30px;
+  width: 50%;
+  line-height: 30px;
+  font-size: 14px;
+  word-break: break-all;
+  color: white;
+  font-weight: bold;
+}
+
+#reviewss {
+  min-height: 40vh;
+  width: 100%;
+  padding: 150px 150px 300px 150px;
+  background-image: url(../images/trading8.png);
+  background-size: 900% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-shadow: 2px 2px 2px black;
+}
+
+#reviewss .reviews {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#review-heading {
+  text-align: center;
+  padding: 40px 0px;
+  color: white;
+}
+
+.reviews .review {
+  outline: 2px solid white;
+  color: white;
+  padding: 80px 80px 80px 80px;
+  min-height: 250px;
+  border-radius: 3px;
+  width: 32%;
+}
+
+.reviews .review h3 {
+  font-size: 14px;
+}
+
+footer {
+  min-height: 7vh;
+  background-color: #f4f4f4;
+  background-image: url(../images/trading8.png);
+  color: white;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+footer .mail {
+  padding: 20px;
+  font-size: 14px;
+}
+
+.about-me {
+  background-color: #000;
+  color: white;
+  padding: 50px 0px;
+}
+
+.about-me .container {
+  min-height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.about-me .container a {
+  text-decoration: none;
+  color: greenyellow !important;
+}
+
+.about-me .container img {
+  max-width: 600px;
+  max-height: 600px;
+}
+
+.about-me .container .social-icons i {
+  font-size: 30px;
+  margin: 5px 15px 5px 15px;
+}
+
+.about-me .container .social-icons {
+  margin-top: 20px;
+  border: 1px solid orange;
+  border-radius: 5px;
+}
+
+@media (max-width: 1200px) {
+  .primexbt {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .primexbt .text {
+    width: 100%;
+    text-align: center;
+  }
+  .primexbt .text p {
+    width: 80%;
+    margin: auto;
+  }
+  .primexbt img {
+    width: 100%;
+  }
+  header a {
+    font-size: 16px;
+  }
+  .about-me .container .about-text {
+    padding-top: 50px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .reviews {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .reviews .review {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  main.main-area {
+    width: 100%;
+    background-image: url("../images/prime-xbt.png");
+    background-size: contain;
+  }
+  .advantages {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .advantages .advantage1,
+  .advantages .advantage2,
+  .advantages .advantage3,
+  .advantages .advantage4 {
+    width: 50%;
+  }
+}
+
+@media (max-width: 856px) {
+  header .container .nav-bar {
+    display: none;
+  }
+}
+
+@media (min-width: 856px) {
+  header .fa-bars {
+    display: none !important;
+  }
+}
+
+@media (max-height: 888px) {
+  main.main-area {
+    min-height: 80vh;
+  }
+}
+
+@media (max-width: 768px) {
+  #reviewss {
+    padding: 50px;
+  }
+  .about-me .container img {
+    width: 300px;
+    height: 250px;
+  }
+  .advantages {
+    width: 100% !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .advantage1,
+  .advantage2,
+  .advantage3,
+  .advantage4 {
+    width: 95% !important;
+    text-align: left;
+  }
+}
+
+@media (min-width: 850px) and (max-width: 1022px) {
+  main.main-area {
+    height: 90vh !important;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
